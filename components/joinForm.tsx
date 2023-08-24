@@ -58,7 +58,7 @@ export function JoinForm() {
             Easiest way to streamline
             collaborative commerce
         </CardTitle>
-        <CardDescription>We’re building commerce 3.0:  A new ecosystem centered around shoppers,  where unconventional platforms become the routes for the world's most exceptional contextual shopping experiences. </CardDescription>
+        <CardDescription>Hello</CardDescription> 
       </CardHeader>
       <CardContent>
         <Form {...form}>
