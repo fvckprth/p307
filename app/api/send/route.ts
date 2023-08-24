@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { NextResponse } from 'next/server';
-import { Email } from '@/emails/test';
 
 import { Resend } from 'resend';
 
@@ -11,5 +10,5 @@ resend.emails.send({
   from: 'onboarding@resend.dev',
   to: 'parth@qortor.com',
   subject: 'Hello World',
-  react: <Email firstName="John" product="MyApp" />,
+  html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
 });
