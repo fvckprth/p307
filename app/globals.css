@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'FKGrotesk';
+  src: url('/fonts/FKGrotesk.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scroll {
+  @apply h-screen overflow-hidden;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  .desktop-bg {
+    display: none; /* Hidden by default */
+  }
+  .mobile-bg {
+    display: block; /* Visible on small screens and down */
+  }
+
+  @screen md {
+    .desktop-bg {
+      display: block; /* Visible on medium screens and up */
+    }
+    .mobile-bg {
+      display: none; /* Hidden on medium screens and up */
+    }
+  }
 }
