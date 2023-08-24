@@ -65,7 +65,7 @@ export function JoinForm() {
             <form
             onSubmit={form.handleSubmit(onSubmit)}
             className="relative space-y-3 overflow-x-hidden"
-            style={{ fontFamily: 'var(--font-fk-grotesk)' }}
+            style={{ fontFamily: "var(--font-fk-grotesk)" }}
             >
             <FormField
                   control={form.control}
