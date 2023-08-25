@@ -1,6 +1,6 @@
 'use client'
 
-import * as React from "react"
+import React from "react"
 
 import { motion } from "framer-motion"
 
@@ -15,19 +15,17 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { joinValidator } from "@/validators/auth"
-import * as z from "zod"
+import z from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
-    FormLabel,
     FormMessage,
   } from "@/components/ui/form";
-import { Textarea } from "./ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
 
 type Input = z.infer<typeof joinValidator>
 
