@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import react from "react";
 import { motion, useAnimation } from 'framer-motion';
