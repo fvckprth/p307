@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ThreeDots from '../components/ThreeDots';
-import BlurImages from '@/components/BlurImages';
-import JoinForm from '@/components/JoinForm';
+import BlurImages from '../components/BlurImages';
+import JoinForm from '../components/JoinForm';
 
 export default function Home() {
   return (
