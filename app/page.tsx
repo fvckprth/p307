@@ -3,7 +3,6 @@ import ThreeDots from '../components/ThreeDots';
 import BlurImages from '@/components/BlurImages';
 import JoinForm from '@/components/JoinForm';
 
-
 export default function Home() {
   return (
     <div className="bg-black h-screen">
