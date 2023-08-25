@@ -50,9 +50,9 @@ export function JoinForm() {
     <motion.div
       initial={{ opacity: 0, y: 5, scale: 0.95, filter: "blur(5px)" }}
       animate={{ scale: 1, opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ delay: 0.3, duration: 0.9 }}
+      transition={{ delay: 0.3, duration: 1.3 }}
     >
-    <Card className="w-[400px]" style={{ fontFamily: 'var(--font-fk-grotesk)' }}>
+    <Card className="w-full md:w-[480px]" style={{ fontFamily: 'var(--font-fk-grotesk)' }}>
       <CardHeader>
         <CardTitle>
             Easiest way to streamline
@@ -64,9 +64,10 @@ export function JoinForm() {
         <Form {...form}>
             <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="relative space-y-3 overflow-x-hidden"
+            className="relative overflow-x-hidden"
             style={{ fontFamily: "var(--font-fk-grotesk)" }}
             >
+            <div className="space-y-3">
             <FormField
                   control={form.control}
                   name="name"
@@ -75,6 +76,7 @@ export function JoinForm() {
                       <FormControl>
                         <Input 
                             placeholder="Enter name or business" {...field} 
+                            className="md:w-4/5"
                         />
                       </FormControl>
                       <FormMessage />
@@ -89,6 +91,7 @@ export function JoinForm() {
                       <FormControl>
                         <Input 
                             placeholder="Enter email address" {...field} 
+                            className="md:w-4/5"
                         />
                       </FormControl>
                       <FormMessage />
@@ -103,17 +106,18 @@ export function JoinForm() {
                       <FormControl>
                         <Textarea 
                             placeholder="Tell us a little bit about yourself" {...field}
+                            className="md:w-4/5"
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
+                  
                 />
-            <CardFooter>
-              <Button className="p-3 bg-transparent rounded-lg border border-white text-white text-xs leading-4" type="submit">
-                  Join Waitlist
-              </Button>
-            </CardFooter>
+            </div>
+            <Button className="mt-8 p-3 bg-transparent rounded-lg border border-white text-white text-xs leading-4" type="submit">
+                Join Waitlist
+            </Button>
             </form>
         </Form>
       </CardContent>
