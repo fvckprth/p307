@@ -9,7 +9,7 @@ function ThreeDots() {
     initial={{ opacity: 0, y: 5, filter: "blur(5px)" }}
     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
     transition={{ delay: 0.3, duration: 0.9 }}
-    className="h-full flex flex-col justify-between"
+    className="relative h-full flex flex-col justify-between z-10"
     >
       <div className="flex justify-between w-full">
         <div style={{ backgroundColor: '#CBADFB' }} className="md:w-12 md:h-12 w-6 h-6"></div>
