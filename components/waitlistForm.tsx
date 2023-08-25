@@ -50,13 +50,17 @@ export function WaitlistForm() {
       animate={{ scale: 1, opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ delay: 0.3, duration: 1.3 }}
     >
-    <Card className="w-full md:w-[480px]" style={{ fontFamily: 'var(--font-fk-grotesk)' }}>
+    <Card className="w-full mx-auto" style={{ fontFamily: 'var(--font-fk-grotesk)' }}>
       <CardHeader>
         <CardTitle>
-            Easiest way to streamline
-            collaborative commerce
+          Easiest Way to Enable <br/>
+          Community Commerce
         </CardTitle>
-        <CardDescription>Hello</CardDescription> 
+        <CardDescription>
+            Platform 307: Stripe meets Alibaba.<br/>
+            Collaborate with anyone to make anything<br/>
+            shoppable. Sign up for early access. <br/>
+        </CardDescription> 
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -74,7 +78,7 @@ export function WaitlistForm() {
                       <FormControl>
                         <Input 
                             placeholder="Enter name or business" {...field} 
-                            className="md:w-4/5"
+                            className="md:w-3/4"
                         />
                       </FormControl>
                       <FormMessage />
@@ -89,7 +93,7 @@ export function WaitlistForm() {
                       <FormControl>
                         <Input 
                             placeholder="Enter email address" {...field} 
-                            className="md:w-4/5"
+                            className="md:w-3/4"
                         />
                       </FormControl>
                       <FormMessage />
@@ -104,7 +108,7 @@ export function WaitlistForm() {
                       <FormControl>
                         <Textarea 
                             placeholder="Tell us a little bit about yourself" {...field}
-                            className="md:w-4/5"
+                            className="md:w-3/4"
                         />
                       </FormControl>
                       <FormMessage />
@@ -113,9 +117,12 @@ export function WaitlistForm() {
                   
                 />
             </div>
-            <Button className="mt-8 p-3 bg-transparent rounded-lg border border-white text-white text-xs leading-4" type="submit">
+            <div className="flex justify-between items-end mt-8">
+              <Button className="px-3 py-2 bg-transparent rounded-lg border border-white text-white text-xs md:text-base" type="submit">
                 Join Waitlist
-            </Button>
+              </Button>
+              <img src="/images/p307-logo.svg" alt="P307 Logo" className="h-4 md:h-6 w-auto" /> {/* Adjust size as needed */}
+            </div>
             </form>
         </Form>
       </CardContent>

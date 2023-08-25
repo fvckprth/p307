@@ -3,6 +3,7 @@
 import ThreeDots from '@/components/ThreeDots';
 import BlurImages from '@/components/BlurImages';
 import WaitlistForm from '@/components/waitlistForm';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
