@@ -2,7 +2,7 @@
 
 import ThreeDots from '@/components/ThreeDots';
 import BlurImages from '@/components/BlurImages';
-import WaitlistForm from '@/components/WaitlistForm';
+import SignUpForm from '@/components/SignUpForm';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <ThreeDots />
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-6 md:px-0 w-full md:w-auto">
         <div className="max-w-full-sm mx-auto md:px-0">
-          <WaitlistForm />
+          <SignUpForm />
           <Footer />
         </div>
       </div>

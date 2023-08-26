@@ -29,7 +29,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 type Input = z.infer<typeof joinValidator>
 
-export function WaitlistForm() {
+export function SignUpForm() {
     const form = useForm<Input>({
         resolver: zodResolver(joinValidator),
         defaultValues: {
@@ -131,4 +131,4 @@ export function WaitlistForm() {
   )
 }
 
-export default WaitlistForm;
+export default SignUpForm;
