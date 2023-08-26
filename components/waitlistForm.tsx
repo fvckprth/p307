@@ -53,8 +53,8 @@ export function WaitlistForm() {
     <Card className="w-full mx-auto" style={{ fontFamily: 'var(--font-fk-grotesk)' }}>
       <CardHeader>
         <CardTitle>
-          Easiest Way to Enable <br/>
-          Community Commerce
+          Easiest way to enable <br/>
+          community commerce
         </CardTitle>
         <CardDescription>
             Platform 307: Stripe meets Alibaba.<br/>

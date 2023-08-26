@@ -11,7 +11,7 @@ function Footer() {
         >
         <div className='flex flex-row mt-6 justify-between items-end'>
             <div>
-                <p className='text-xs md:text-sm text-[#5D5D5D] text-opacity-25 leading-tight tracking-tight'>
+                <p className='text-xs md:text-sm text-[#E4E4E4] text-opacity-25 leading-tight tracking-tight'>
                     © 2023 East Park Holdings Group<br />
                     info@eastpark.xyz
                 </p>
