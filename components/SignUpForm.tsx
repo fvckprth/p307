@@ -133,7 +133,7 @@ export function SignUpForm() {
             </div>
             <div className="flex justify-between items-end mt-8">
               <Button             
-                className={`px-3 py-2 rounded-lg text-xs md:text-base ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] opacity-25'}`} 
+                className={`px-3 py-2 rounded-lg text-xs md:text-base leading-tight tracking-tight ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] text-opacity-25 border-opacity-25'}`} 
                 type="submit" 
                 disabled={!isValid}>
                   Join Waitlist
