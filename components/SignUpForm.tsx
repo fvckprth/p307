@@ -39,10 +39,12 @@ export function SignUpForm() {
         },
     })
 
-  function onSubmit(data: Input) {
+    function onSubmit(data: Input) {
     alert(JSON.stringify(data, null, 4));
     console.log(data)
     }
+
+    const { isValid } = form.formState;
 
   return (
     <motion.div
@@ -118,8 +120,11 @@ export function SignUpForm() {
                 />
             </div>
             <div className="flex justify-between items-end mt-8">
-              <Button className="px-3 py-2 bg-transparent rounded-lg border border-white text-white text-xs md:text-base" type="submit">
-                Join Waitlist
+              <Button             
+                className={`px-3 py-2 rounded-lg text-xs md:text-base ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] opacity-25'}`} 
+                type="submit" 
+                disabled={!isValid}>
+                  Join Waitlist
               </Button>
               <img src="/images/p307-logo.svg" alt="P307 Logo" className="h-4 md:h-6 w-auto" /> {/* Adjust size as needed */}
             </div>
