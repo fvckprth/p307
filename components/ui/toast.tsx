@@ -60,7 +60,7 @@ const ToastAction = React.forwardRef<
   <ToastPrimitives.Action
     ref={ref}
     className={cn(
-      "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
+      "inline-flex shrink-0 items-center justify-center rounded-md border bg-transparent text-sm ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
       className
     )}
     {...props}
@@ -92,7 +92,7 @@ const ToastTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Title
     ref={ref}
-    className={cn("text-sm md:text-base text-[#D8FBAD]", className)}
+    className={cn("text-xs md:text-base text-[#D8FBAD]", className)}
     {...props}
   />
 ))
@@ -104,7 +104,7 @@ const ToastDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Description
     ref={ref}
-    className={cn("text-sm md:text-base text-[#E4E4E4] text-opacity-25", className)}
+    className={cn("text-xs md:text-base text-[#E4E4E4] text-opacity-25", className)}
     {...props}
   />
 ))
