@@ -59,7 +59,8 @@ export function SignUpForm() {
         backdropFilter: "blur(10px)", 
         padding: "0.75rem",
         color: "#D8FBAD",
-        zIndex: 1000,
+        zIndex: 10000,
+        position: 'relative'
       },
       className: 'my-toast',
       descriptionClassName: 'my-toast-description'
@@ -90,8 +91,8 @@ export function SignUpForm() {
         </CardTitle>
         <CardDescription>
             Platform 307: Stripe meets Alibaba.<br/>
-            Collaborate with anyone to make anything<br/>
-            shoppable. Sign up for early access. <br/>
+            Sell anything, anywhere, with anyone.<br/>
+            Sign up for early access. <br/>
         </CardDescription> 
       </CardHeader>
       <CardContent>
@@ -151,7 +152,7 @@ export function SignUpForm() {
             </div>
             <div className="flex justify-between items-end mt-8">
               <Button             
-                className={`px-3 py-2 rounded-lg text-xs md:text-base leading-tight tracking-tight ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] text-opacity-25 border-opacity-25'}`} 
+                className={`px-3 py-2 rounded-lg text-base leading-tight tracking-tight ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] text-opacity-25 border-opacity-25'}`} 
                 type="submit" 
                 disabled={!isValid}>
                   Join Waitlist

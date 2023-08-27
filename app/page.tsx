@@ -8,7 +8,7 @@ import { Toaster } from 'sonner';
 
 export default function Home() {
   return (
-    <div className="bg-[#101010] h-full overflow-y-hidden relative">
+    <div className="bg-[#101010] h-full overflow-y-hidden relative z-0">
       <Toaster />
       <BlurImages />
       <ThreeDots />
