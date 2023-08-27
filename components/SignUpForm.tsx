@@ -58,6 +58,7 @@ export function SignUpForm() {
         backdropFilter: "blur(10px)", 
         padding: "0.75rem",
         color: "#D8FBAD",
+        zIndex: 1000,
       },
       className: 'my-toast',
       descriptionClassName: 'my-toast-description'
