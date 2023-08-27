@@ -26,36 +26,47 @@ import {
     FormMessage,
   } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast"
+import { Toaster, toast } from 'sonner'
 
 
-type Input = z.infer<typeof joinValidator>
+type Input = z.infer<typeof joinValidator>;
 
 export function SignUpForm() {
-    const form = useForm<Input>({
-        resolver: zodResolver(joinValidator),
-        defaultValues: {
-            name: "",
-            email: "",
-            details: "",
-        },
-    })
+  const form = useForm<Input>({
+    resolver: zodResolver(joinValidator),
+    defaultValues: {
+      name: "",
+      email: "",
+      details: "",
+    },
+  });
 
-    const { toast } = useToast();
+  // Initialize Sonner's Toaster
+  // Place this in the root of your app if possible
+  <Toaster position="bottom-right" />;
 
-    function onSubmit(data: Input) {
-      // Simulate API call and success response
-      setTimeout(() => {
-        toast({
-          title: 'Thanks for signing up',
-          description: 'We will contact you soon with updates.',
-        });
-  
-        form.reset(); // Reset the form
-      }, 1000);
-    }
-  
-    const { isValid } = form.formState;
+  function onSubmit(data: Input) {
+    // Simulate API call and success response
+    setTimeout(() => {
+      toast("Thank you for signing up.", {
+      description: "We will contact you soon with updates.",
+      style: {
+        border: "1px solid",
+        borderColor:  "rgba(228, 228, 228, 0.25)",
+        backgroundColor: "rgba(16, 16, 16, 0.25)",
+        borderRadius: "0.75rem",
+        backdropFilter: "blur(10px)", 
+        padding: "0.75rem",
+        color: "#D8FBAD",
+      },
+      className: 'my-toast',
+      descriptionClassName: 'my-toast-description'
+    });
+      form.reset(); // Reset the form
+    }, 1000);
+  }
+
+  const { isValid } = form.formState;
 
   return (
     <div>

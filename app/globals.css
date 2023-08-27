@@ -40,6 +40,10 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.my-toast-description {
+  color: rgba(228, 228, 228, 0.25) !important;
+}
+
 @layer base {
   .desktop-bg {
     display: none; /* Hidden by default */

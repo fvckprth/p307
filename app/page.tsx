@@ -4,7 +4,7 @@ import ThreeDots from '@/components/ThreeDots';
 import BlurImages from '@/components/BlurImages';
 import SignUpForm from '@/components/SignUpForm';
 import Footer from '@/components/Footer';
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from 'sonner';
 
 export default function Home() {
   return (
