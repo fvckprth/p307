@@ -58,6 +58,11 @@ input:-webkit-autofill:focus {
   color: rgba(228, 228, 228, 0.25) !important;
 }
 
+.input-placeholder {
+  color: rgba(228, 228, 228, 0.25) !important;
+}
+
+
 @layer base {
   .desktop-bg {
     display: none; /* Hidden by default */

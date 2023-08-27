@@ -69,6 +69,19 @@ export function SignUpForm() {
       name: "",
       email: "",
       details: "",
+    }, {
+      // Reset only form values
+      keepValues: false,
+      // Reset only errors
+      keepErrors: false,
+      // Reset only dirty state
+      keepDirty: false,
+      // Reset only isValid
+      keepIsValid: false,
+      // Reset only touched
+      keepTouched: false,
+      // Reset only submitCount
+      keepSubmitCount: false,
     });
   }, 1000);
 }

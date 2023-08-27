@@ -7,7 +7,7 @@ const BlurImages = () => {
     <motion.div
       initial={{ opacity: 0, y: 5, scale: 0.95, filter: "blur(5px)" }}
       animate={{ scale: 1, opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ delay: 0.3, duration: 1.3 }}
+      transition={{ delay: 0.5, duration: 1.9 }}
       className="BlurImages h-screen w-full absolute z-0 bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/mobile-bg.svg')",
