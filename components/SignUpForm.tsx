@@ -63,9 +63,13 @@ export function SignUpForm() {
       className: 'my-toast',
       descriptionClassName: 'my-toast-description'
     });
-      form.reset(); // Reset the form
-    }, 1000);
-  }
+    form.reset({
+      name: "",
+      email: "",
+      details: "",
+    });
+  }, 1000);
+}
 
   const { isValid } = form.formState;
 
