@@ -50,6 +50,8 @@ input:-webkit-autofill:focus {
   z-index: 10001 !important;
   position: relative;
   font-size: 16px !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .my-toast-description {
