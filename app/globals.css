@@ -18,6 +18,10 @@ body {
   display: none;
 }
 
+input:focus {
+  font-size: 16px; /* Prevents zooming */
+}
+
 input:-webkit-autofill::first-line {
   font-family: 'FKGrotesk', sans-serif;
   font-size: 12px;

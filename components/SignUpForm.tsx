@@ -41,6 +41,7 @@ export function SignUpForm() {
     },
   });
 
+
   // Initialize Sonner's Toaster
   // Place this in the root of your app if possible
   <Toaster position="bottom-right" />;
@@ -70,6 +71,7 @@ export function SignUpForm() {
     });
   }, 1000);
 }
+
 
   const { isValid } = form.formState;
 
