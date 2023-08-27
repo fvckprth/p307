@@ -26,6 +26,8 @@ import {
     FormMessage,
   } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast"
+
 
 type Input = z.infer<typeof joinValidator>
 
@@ -39,14 +41,24 @@ export function SignUpForm() {
         },
     })
 
-    function onSubmit(data: Input) {
-    alert(JSON.stringify(data, null, 4));
-    console.log(data)
-    }
+    const { toast } = useToast();
 
+    function onSubmit(data: Input) {
+      // Simulate API call and success response
+      setTimeout(() => {
+        toast({
+          title: 'Thanks for signing up',
+          description: 'We will contact you soon with updates.',
+        });
+  
+        form.reset(); // Reset the form
+      }, 1000);
+    }
+  
     const { isValid } = form.formState;
 
   return (
+    <div>
     <motion.div
       initial={{ opacity: 0, y: 5, scale: 0.95, filter: "blur(5px)" }}
       animate={{ scale: 1, opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -133,6 +145,7 @@ export function SignUpForm() {
       </CardContent>
     </Card>
     </motion.div>
+  </div>
   )
 }
 

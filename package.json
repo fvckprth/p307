@@ -12,6 +12,7 @@
     "@hookform/resolvers": "^3.3.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.4",
     "@react-email/button": "0.0.10",
     "@react-email/html": "0.0.4",
     "@react-email/tailwind": "0.0.8",
