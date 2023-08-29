@@ -3,8 +3,12 @@ import { Resend } from 'resend';
 
 import WaitlistEmail from '@/emails/waitlist';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendAPIKey = process.env.RESEND_API_KEY;
+if (!resendAPIKey) {
+  throw new Error('Missing RESEND_API_KEY environment variable');
+}
 
+const resend = new Resend(resendAPIKey);
 export async function POST(request: Request) {
     const { name, email } = await request.json();
     await resend.sendEmail({
