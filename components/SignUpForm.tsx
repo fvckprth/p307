@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react"
+import React, { useState } from "react"
 
 import { motion } from "framer-motion"
 
@@ -26,7 +26,8 @@ import {
     FormMessage,
   } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
-import { Toaster, toast } from 'sonner'
+import { toast } from 'sonner'
+import { supabase } from '../lib/supabaseClient'
 
 
 type Input = z.infer<typeof joinValidator>;
@@ -41,13 +42,12 @@ export function SignUpForm() {
     },
   });
 
-
-  // Initialize Sonner's Toaster
-  // Place this in the root of your app if possible
-  <Toaster position="bottom-right" />;
+  const [isLoading, setIsLoading] = useState(false);
 
   async function onSubmit(data: Input) {
+    setIsLoading(true);
     // Simulate API call and success response
+    await new Promise(resolve => setTimeout(resolve, 1000));
     setTimeout(async () => {
       toast("Thank you for signing up.", {
       description: "We will contact you soon with updates.",
@@ -73,8 +73,21 @@ export function SignUpForm() {
           body: JSON.stringify({
             name: data.name,
             email: data.email,
+            details: data.details,
           }),
         });
+  
+        // Insert into Supabase
+        const { error } = await supabase
+          .from('waitlist')
+          .insert([
+            { name: data.name, email: data.email, details: data.details },
+          ]);
+  
+        if (error) {
+          throw error;
+        }
+  
       } catch (error) {
         console.error("Error sending email:", error);
       }
@@ -94,7 +107,8 @@ export function SignUpForm() {
           keepSubmitCount: false,
         }
       );
-    }, 1000);
+      setIsLoading(false);
+    });
   }
 
   const { isValid } = form.formState;
@@ -174,12 +188,12 @@ export function SignUpForm() {
                 />
             </div>
             <div className="flex justify-between items-end mt-8">
-              <Button             
-                className={`px-3 py-2 rounded-lg text-base leading-tight tracking-tight ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] text-opacity-25 border-opacity-25'}`} 
-                type="submit" 
-                disabled={!isValid}>
-                  Join Waitlist
-              </Button>
+            <Button             
+              className={`px-3 py-2 rounded-lg text-base leading-tight tracking-tight ${isValid ? 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4]' : 'bg-transparent border border-[#E4E4E4] text-[#E4E4E4] text-opacity-25 border-opacity-25'}`} 
+              type="submit" 
+              disabled={!isValid || isLoading}>
+                {isLoading ? 'Please wait...' : 'Join Waitlist'}
+            </Button>
               <img src="/images/p307-logo.svg" alt="P307 Logo" className="h-4 md:h-6 w-auto" /> {/* Adjust size as needed */}
             </div>
             </form>
