@@ -46,14 +46,14 @@ export function SignUpForm() {
   // Place this in the root of your app if possible
   <Toaster position="bottom-right" />;
 
-  function onSubmit(data: Input) {
+  async function onSubmit(data: Input) {
     // Simulate API call and success response
-    setTimeout(() => {
+    setTimeout(async () => {
       toast("Thank you for signing up.", {
       description: "We will contact you soon with updates.",
       style: {
         border: "1px solid",
-        borderColor:  "rgba(228, 228, 228, 0.25)",
+        borderColor:  "#D8FBAD",
         backgroundColor: "rgba(16, 16, 16, 0.25)",
         borderRadius: "0.75rem",
         backdropFilter: "blur(10px)", 
@@ -65,27 +65,37 @@ export function SignUpForm() {
       className: 'my-toast',
       descriptionClassName: 'my-toast-description'
     });
-    form.reset({
-      name: "",
-      email: "",
-      details: "",
-    }, {
-      // Reset only form values
-      keepValues: false,
-      // Reset only errors
-      keepErrors: false,
-      // Reset only dirty state
-      keepDirty: false,
-      // Reset only isValid
-      keepIsValid: false,
-      // Reset only touched
-      keepTouched: false,
-      // Reset only submitCount
-      keepSubmitCount: false,
-    });
-  }, 1000);
-}
 
+      // Send email
+      try {
+        await fetch("/api/email", {
+          method: "POST",
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+          }),
+        });
+      } catch (error) {
+        console.error("Error sending email:", error);
+      }
+
+      form.reset(
+        {
+          name: "",
+          email: "",
+          details: "",
+        },
+        {
+          keepValues: false,
+          keepErrors: false,
+          keepDirty: false,
+          keepIsValid: false,
+          keepTouched: false,
+          keepSubmitCount: false,
+        }
+      );
+    }, 1000);
+  }
 
   const { isValid } = form.formState;
 
@@ -100,11 +110,11 @@ export function SignUpForm() {
       <CardHeader>
         <CardTitle>
           Easiest way to enable <br/>
-          community commerce
+          collaborative commerce
         </CardTitle>
         <CardDescription>
             Platform 307: Stripe meets Alibaba.<br/>
-            Sell anything, anywhere, with anyone.<br/>
+            Let anyone, sell anything, anywhere.<br/>
             Sign up for early access. <br/>
         </CardDescription> 
       </CardHeader>

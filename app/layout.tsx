@@ -10,7 +10,7 @@ const fkGrotesk = localFont({
 });
 
 export const metadata = {
-  title: 'P307 ⎯ Stripe meets Alibaba',
+  title: 'P307 ⎯ Easily let anyone sell your products anywhere.',
   description: 'Enable your community to market and sell your products anywhere on the internet.',
   siteUrl: 'https://www.p307.net',
   twitterHandle: '@p307',
