@@ -17,7 +17,7 @@ function ThreeDots() {
         <div style={{ backgroundColor: '#ADD6FB' }} className="md:w-12 md:h-12 w-6 h-6"></div>
       </div>
       <div className="flex justify-between w-full">
-        <div style={{ backgroundColor: '#ADFBF6' }} className="md:w-12 md:h-12 w-6 h-6"></div>
+        <div style={{ backgroundColor: '#D9FBAD' }} className="md:w-12 md:h-12 w-6 h-6"></div>
         <div style={{ backgroundColor: '#F0ADFB' }} className="md:w-12 md:h-12 w-6 h-6"></div>
         <div style={{ backgroundColor: '#FBADAD' }} className="md:w-12 md:h-12 w-6 h-6"></div>
       </div>

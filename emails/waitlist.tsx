@@ -1,6 +1,7 @@
 import { 
   Body,
   Container,
+  Column,
   Head,
   Html,
   Img,
@@ -10,6 +11,8 @@ import {
   Preview,
   Section,
   Text,
+  Tailwind,
+  Row,
 } from '@react-email/components';
 import * as React from 'react';
 
@@ -24,181 +27,168 @@ const baseUrl = process.env.VERCEL_URL
 
 export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
   return (
+  <Tailwind
+            config={{
+              theme: {
+                extend: {
+                  colors: {
+                    brand: '#007291',
+                  },
+                },
+              },
+            }}
+          >
     <Html>
-    <Head>
-      <Preview>Welcome to Platform 307, { name }</Preview>
-      <Font
-        fontFamily="FK Grotesk"
-        fallbackFontFamily="Verdana"
-        webFont={{
-          url: `${baseUrl}/fonts/FKGrotesk.otf`,
-          format: 'opentype',
-        }}
-        fontWeight={400}
-        fontStyle="normal"
-      />
-    </Head>
-    <Body style={main}>
-      <Section style={{ ...logo, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Img
-          src={`${baseUrl}/static/p307-logo.png`}
-          width="20%"
-          height="100%"
-          alt="P307 Logomark"
-        />   
-        </Section>
-      <Container style={container}>
-        <Section style={{ ... box, display: 'flex', flexDirection: 'row', gap: '100px'}}>
-          <Text style={paragraph}>
-            Hi { name },
-          </Text>
-          <Text style={paragraph}>
-            Thank you for joining the P307 waitlist. We’re building the
-            infrastructure for collaborative commerce, just like Salesforce
-            did for CRM, and Plaid did for banking.
-          </Text>
-          <Text style={paragraph}>
-            If the 20th-century retail scene revolved around Macy's and
-            Best Buy, the 21st-century model will center on us—creators,
-            restaurants, publishers, building communities and earning trust
-            along the way.
-          </Text>
-          <Text style={paragraph}>
-            Here's the future we're building:
-          </Text>
-          <section style={{ display: 'flex', alignItems: 'baseline' }}>
-            <Text style={{ ... paragraph, marginRight: '0.75rem' }}>▪︎</Text>
-            <Text style={paragraph}>
-              An online magazine incorporates an in-article shopping
-              experience for its seasonal gift guides, auto-curated from
-              a network of suppliers.
-            </Text>
-          </section>
-          <section style={{ display: 'flex', alignItems: 'baseline' }}>
-            <Text style={{ ... paragraph, marginRight: '0.75rem' }}>▪︎</Text>
-            <Text style={paragraph}>
-              A local speakeasy could sell vinyl records handpicked from
-              a record shops, linking products to DJ audio mixes, and sharing
-              the proceeds.
-            </Text>
-          </section>
-          <section style={{ display: 'flex', alignItems: 'baseline' }}>
-            <Text style={{ ... paragraph, marginRight: '0.75rem' }}>▪︎</Text>
-            <Text style={paragraph}>
-              A pet owner buys organic dog food, with our AI indicating at
-              checkout that the veterinarian recommending it has been
-              a consultant for the brand
-            </Text>
-          </section>
-          <Text style={paragraph}>
-          At Platform 307, we're turning partners into curated retailers
-          and suppliers into trusted brands, all in a transparent ecosystem.
-          building a new world; we're enhancing the one you already live in.
-          </Text>
-          <Text style={paragraph}>
-          Allowing seamless multi-merchant transactions across the internet,
-          so that you can transact exactly where you discover. We're not 
-          </Text>
-          <Text style={paragraph}>
-          We're excited to have you on board and will keep you updated on 
-          our progress. 
-          </Text>
-          <Text style={paragraph}>
-          With appreciation,
-          </Text>
-        </Section>
-        <Section style={box}>
-          <Img
-            src={`${baseUrl}/static/p307-logo.png`}
-            width="20%"
-            height="100%"
-            alt="P307 Logomark"
-          />
-          <Text style={paragraph}>
-            ⎯{' '}
-            <Link href="https://www.parth.ski" style={anchor}>
-              Parth Patel
-            </Link>
-          </Text>   
-        </Section>
-        <Section style={box}>
-          <Hr style={hr}/>
-          <Text style={footer}>
-            We are{' '}
-              <Link href="https://www.eastpark.xyz" style={anchor}>
-                East Park
-              </Link>
-            . We build, create, and invest in things that forge a greener, more accessible, and joyfully brighter future.
-          </Text> 
-          <Text style={footer}>
-            This email was sent to { email }. If you’d rather not receive this kind of email, you can unsubscribe at any time.
-          </Text>
-          <Hr style={hr}/>
-        </Section>
-        <Section style={box}>
-          <Text style={footer}>
-            © 2023 East Park Holdings Group.,<br/>
-            25 Clinton St. New York City,<br/>
-            New York 10002
-          </Text>
-          <Link href="tel:+16467594054" style={{ ...anchor, ...footer }}>
-            +1 (646) 759 4054
-          </Link>
-          <Link href="mail:info@eastpark.xyz" style={{ ...anchor, ...footer }}>
-            info@eastpark.xyz
-          </Link>
-          <Link href="mail:info@eastpark.xyz" style={{ ...anchor, ...footer }}>
-            Unsubscribe
-          </Link>
-        </Section>
+        <Head>
+            <Preview>Welcome to Platform 307, { name }</Preview>
+            <Font
+              fontFamily="FK Grotesk"
+              fallbackFontFamily="Verdana"
+              webFont={{
+                url: `${baseUrl}/fonts/FKGrotesk.otf`,
+                format: 'opentype',
+              }}
+              fontWeight={400}
+              fontStyle="normal"
+            />
+        </Head>
+        <Body className='bg-[#121212] md:bg-[#181818]'>
+          <Section className="flex justify-center items-start p-8">
+            <Img
+              src={`${baseUrl}/static/p307-logo.png`}
+              width="137"
+              height="40"
+              alt="P307 Logomark"
+            />   
+          </Section>
+          <Container className="bg-[#121212] border border-solid border-[#3F3F3F] rounded-2xl mx-auto px-6 py-4 md:px-12 md:py-8">
+            <Section className="flex flex-row gap-24">
+              <Section>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  Hi { name },
+                </Text>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  Thank you for joining the P307 waitlist. We’re building the
+                  infrastructure for collaborative commerce, just like Salesforce
+                  did for CRM, and Plaid did for banking.
+                </Text>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  If the 20th-century retail scene revolved around Macy's and
+                  Best Buy, the 21st-century model will center on us—creators,
+                  restaurants, publishers, building communities and earning trust
+                  along the way.
+                </Text>
+              </Section>
+              <Section>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  Here's the future we're building:
+                </Text>
+                <Row className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left mb-4">
+                  <Column className='pr-2 md:pr-4 md:pb-12'>▪</Column>
+                  <Column>
+                    An online magazine incorporates an in-article shopping
+                    experience for its seasonal gift guides, auto-curated from
+                    a network of suppliers.
+                  </Column>
+                </Row>
+                <Row className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left mb-4">
+                  <Column className='pr-2 mb-12 md:pr-4 md:pb-12'>▪</Column>
+                  <Column>
+                    A local speakeasy could sell vinyl records handpicked from
+                    a record shops, linking products to DJ audio mixes, and sharing
+                    the proceeds.
+                  </Column>
+                </Row>
+                <Row className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left mb-2">
+                <Column className='pr-2 mb-12 md:pr-4 md:pb-12'>▪</Column>
+                  <Column>
+                    A pet owner buys organic dog food, with our AI indicating at
+                    checkout that the veterinarian recommending it has been
+                    a consultant for the brand
+                  </Column>
+                </Row>
+              </Section>
+              <Section>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  At Platform 307, we're turning partners into curated retailers
+                  and suppliers into trusted brands, all in a transparent ecosystem.
+                </Text>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  Allowing seamless multi-merchant transactions across the internet,
+                  so that you can transact exactly where you discover. We're not building 
+                  a new world; we're enhancing the one you already live in. 
+                </Text>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  We're excited to have you on board and will keep you updated on 
+                  our progress. 
+                </Text>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  With appreciation,
+                </Text>
+              </Section>
+              <Section className="pt-8 pb-4">
+                <Img
+                  src={`${baseUrl}/static/parth-signature.png`}
+                  width="81"
+                  height="48"
+                  alt="Parth Patel's Signature"
+                />
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-6 text-left">
+                  ⎯{'   '}
+                  <Link href="https://www.parth.ski" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4	decoration-from-font">
+                    Parth Patel
+                  </Link>
+                </Text>   
+              </Section>
+            </Section>
+            <Section>
+              <Hr className="border-[#3F3F3F] my-4"/>
+              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-4 text-left">
+                We are{' '}
+                <Link href="https://eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
+                  East Park
+                </Link>
+                . We build, create, and invest in things that forge a greener, more accessible, and joyfully brighter future.
+              </Text>
+              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-4 text-left">
+                This email was sent to { email }. If you’d rather not receive this kind of email, you can{' '} 
+                <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
+                unsubscribe
+                </Link>
+                {' '}at any time.
+              </Text>
+              <Hr className="border-[#3F3F3F] my-4"/>
+            </Section>
+            <Section>
+              <Text className="text-[#3F3F3F] text-xs md:text-sm no-underline decoration-from-font leading-4 text-left">
+                © 2023 East Park Holdings Group.,<br/>
+                25 Clinton St. New York City,<br/>
+                New York 10002
+              </Text>
+            </Section>
+            <Section>
+              <Row>
+                <Section className="pr-8 pt-2">
+                  <Link href="tel:+16467594054" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4 pr-4  md:pr-16">
+                    +1 (646) 759 4054
+                  </Link>
+                  <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4">
+                    Unsubscribe
+                  </Link>
+                </Section>
+                <Section className="pr-8 pt-2">
+                  <Link href="mail:info@eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4 pr-4  md:pr-16">
+                    info@eastpark.xyz
+                  </Link>
+                  <Link href="https://resend.com/shared?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsX2lkIjoiOGQ2MDI4YjMtMGEyYy00MmE1LWEwYjEtMjYxNGU2NTI0ZDI1In0sImlhdCI6MTY5MzI4ODgwNiwiZXhwIjoxNjkzNDYxNjA2fQ.0kktdj8N94z1WP1KmVSbr6bsBvW6mYEWCxyrXiG3dmM" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4">
+                    View in browser
+                  </Link>
+                </Section>
+              </Row>
+            </Section>
       </Container>
     </Body>
   </Html>
+</Tailwind>
 );
 }
-
-const logo = {
-  padding: '2rem 1.5rem',
-};
-
-const main = {
-  backgroundColor: '#181818',
-};
-
-const container = {
-  backgroundColor: '#101010',
-  borderRadius: '1em',
-  margin: '0 auto',
-  padding: '2rem 0 4rem',
-};
-
-const box = {
-  padding: '0 4rem',
-};
-
-const hr = {
-  borderColor: '#1C1C1C',
-  margin: '20px 0',
-};
-
-const paragraph = {
-  color: '#E4E4E4',
-  fontSize: '1em',
-  lineHeight: '1.5em',
-  textAlign: 'left' as const,
-  marginTop: '1em',
-  marginBottom: '1em',
-};
-
-const anchor = {
-  color: '#E4E4E4',
-  textDecoration: 'underline',
-  textDecorationThickness: 'from-font',
-  textUnderlineOffset: '0.25em',
-};
-
-const footer = {
-  color: '#3F3F3F',
-  fontSize: '0.75em',
-  lineHeight: '1.5em',
-};
