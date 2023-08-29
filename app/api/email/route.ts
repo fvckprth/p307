@@ -12,7 +12,8 @@ export async function POST(request: Request) {
     to: email,
     subject: 'P307 - Welcome to the waitlist',
     react: WaitlistEmail({
-        name
+        name,
+        email,
     })
 });
 
