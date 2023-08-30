@@ -149,7 +149,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                 <Link href="https://eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
                   East Park
                 </Link>
-                . We build, create, and invest in things that forge a greener, more accessible, and joyfully brighter future.
+                . We build, foster, and invest in things that forge a greener, more accessible, and joyfully brighter future.
               </Text>
               <Text className="text-[#3F3F3F] text-xs md:text-sm leading-3 md:leading-4 text-left">
                 This email was sent to { email }. If you’d rather not receive this kind of email, you can{' '} 
