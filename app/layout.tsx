@@ -1,5 +1,4 @@
 import './globals.css'
-import type { Metadata } from 'next'
 import Head from 'next/head';
 import localFont from 'next/font/local';
 
@@ -21,8 +20,8 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const imageUrl = `${metadata.siteUrl}/images/P307-social.png`;
-  
+  const imageUrl = 'https://p307.net/images/P307-social.png';
+
   return (
     <html lang="en">
       <Head>
@@ -41,6 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta property="og:image:height" content="675" />
 
         <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content={metadata.twitterHandle} />
         <meta property="twitter:url" content={metadata.siteUrl} />
         <meta property="twitter:title" content={metadata.title} />
         <meta property="twitter:description" content={metadata.description} />
