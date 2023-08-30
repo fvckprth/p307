@@ -29,6 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0 viewport-fit=cover" />
+        <meta name="image" property="og:image" content="https://p307.net/images/P307-social.png" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={metadata.siteUrl} />
