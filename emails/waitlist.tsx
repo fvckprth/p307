@@ -19,6 +19,7 @@ import * as React from 'react';
 interface WaitlistEmailProps {
     name: string;
     email: string;
+    details: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -78,12 +79,12 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   restaurants, publishers, building communities and earning trust
                   along the way.
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   Here's the future we're building:
                 </Text>
               </Section>
               <Section>
-                <Row className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left mb-4">
+                <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-4">
                   <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
                     An online magazine incorporates an in-article shopping
@@ -91,7 +92,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                     a network of suppliers.
                   </Column>
                 </Row>
-                <Row className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left mb-4">
+                <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-4">
                   <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
                     A local speakeasy could sell vinyl records handpicked from
@@ -99,41 +100,41 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                     the proceeds.
                   </Column>
                 </Row>
-                <Row className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-66 text-left mb-2">
+                <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-2">
                 <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
                     A pet owner buys organic dog food, with our AI indicating at
                     checkout that the veterinarian recommending it has been
-                    a consultant for the brand
+                    a consultant for the brand.
                   </Column>
                 </Row>
               </Section>
               <Section>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   At Platform 307, we're turning partners into curated retailers
                   and suppliers into trusted brands, all in a transparent ecosystem.
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   Allowing seamless multi-merchant transactions across the internet,
                   so that you can transact exactly where you discover. We're not building 
                   a new world; we're enhancing the one you already live in. 
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-66 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-66 text-left">
                   We're excited to have you on board and will keep you updated on 
                   our progress. 
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   With appreciation,
                 </Text>
               </Section>
               <Section className="pt-8 pb-4">
                 <Img
                   src={`${baseUrl}/static/parth-signature.png`}
-                  width={Math.round(81 * 1.5)}
-                  height={Math.round(48 * 1.5)}
+                  width={Math.round(81 * 1.3)}
+                  height={Math.round(48 * 1.3)}
                   alt="Parth Patel's Signature"
                 />
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left pt-4 pb-8">
                   ⎯{'   '}
                   <Link href="https://www.parth.ski" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4	decoration-from-font">
                     Parth Patel
@@ -143,14 +144,14 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
             </Section>
             <Section>
               <Hr className="border-[#3F3F3F] my-4 md:my-8"/>
-              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-2 md:leading-4 text-left">
+              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-3 md:leading-4 text-left">
                 We are{' '}
                 <Link href="https://eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
                   East Park
                 </Link>
                 . We build, create, and invest in things that forge a greener, more accessible, and joyfully brighter future.
               </Text>
-              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-2 md:leading-4 text-left">
+              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-3 md:leading-4 text-left">
                 This email was sent to { email }. If you’d rather not receive this kind of email, you can{' '} 
                 <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
                 unsubscribe
@@ -160,7 +161,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
               <Hr className="border-[#3F3F3F] my-4 md:my-8"/>
             </Section>
             <Section>
-              <Text className="text-[#3F3F3F] text-xs md:text-sm no-underline decoration-from-font leading-2 md:leading-4 text-left">
+              <Text className="text-[#3F3F3F] text-xs md:text-sm no-underline decoration-from-font leading-3 md:leading-4 text-left">
                 © 2023 East Park Holdings Group.,<br/>
                 25 Clinton St. New York City,<br/>
                 New York 10002
@@ -169,18 +170,18 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
             <Section>
               <Row>
                 <Section className="pr-8 pt-2">
-                  <Link href="tel:+16467594054" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-2 md:leading-4 pr-4  md:pr-16">
+                  <Link href="tel:+16467594054" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4 pr-4  md:pr-16">
                     +1 (646) 759 4054
                   </Link>
-                  <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-2 md:leading-4">
+                  <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4">
                     Unsubscribe
                   </Link>
                 </Section>
                 <Section className="pr-8 pt-2">
-                  <Link href="mail:info@eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-2 md:leading-4 pr-4  md:pr-16">
+                  <Link href="mail:info@eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4 pr-4  md:pr-16">
                     info@eastpark.xyz
                   </Link>
-                  <Link href="https://resend.com/shared?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsX2lkIjoiOGQ2MDI4YjMtMGEyYy00MmE1LWEwYjEtMjYxNGU2NTI0ZDI1In0sImlhdCI6MTY5MzI4ODgwNiwiZXhwIjoxNjkzNDYxNjA2fQ.0kktdj8N94z1WP1KmVSbr6bsBvW6mYEWCxyrXiG3dmM" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-2 md:leading-4">
+                  <Link href="https://resend.com/shared?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsX2lkIjoiOGQ2MDI4YjMtMGEyYy00MmE1LWEwYjEtMjYxNGU2NTI0ZDI1In0sImlhdCI6MTY5MzI4ODgwNiwiZXhwIjoxNjkzNDYxNjA2fQ.0kktdj8N94z1WP1KmVSbr6bsBvW6mYEWCxyrXiG3dmM" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4">
                     View in browser
                   </Link>
                 </Section>

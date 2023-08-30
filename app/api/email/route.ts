@@ -10,14 +10,15 @@ if (!resendAPIKey) {
 
 const resend = new Resend(resendAPIKey);
 export async function POST(request: Request) {
-    const { name, email } = await request.json();
+    const { name, email, details } = await request.json();
     await resend.sendEmail({
-    from: 'welcome@p307.net',
+    from: 'Platform 307 <notifications@p307.net>',
     to: email,
-    subject: 'P307 - Welcome to the waitlist',
+    subject: 'Welcome to the waitlist',
     react: WaitlistEmail({
         name,
         email,
+        details,
     })
 });
 
