@@ -11,6 +11,7 @@ const fkGrotesk = localFont({
 export const metadata = {
   title: 'Let anyone sell your products anywhere.',
   description: 'Enable your community to market and sell your products anywhere on the internet.',
+  image: 'https://p307.net/images/P307-social.png',
   siteUrl: 'https://www.p307.net',
   twitterHandle: '@p307',
 };
@@ -20,7 +21,6 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const imageUrl = 'https://p307.net/images/P307-social.png';
 
   return (
     <html lang="en">
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta property="og:url" content={metadata.siteUrl} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content={metadata.image} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="675" />
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta property="twitter:url" content={metadata.siteUrl} />
         <meta property="twitter:title" content={metadata.title} />
         <meta property="twitter:description" content={metadata.description} />
-        <meta property="twitter:image" content={imageUrl} />
+        <meta property="twitter:image" content={metadata.image} />
         <meta property="twitter:type" content="image/png" />
         <meta property="twitter:width" content="1200" />
         <meta property="twitter:height" content="675" />
