@@ -57,23 +57,23 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
           <Section className="flex items-start p-8">
             <Img
               src={`${baseUrl}/static/p307-logo.png`}
-              width="137"
-              height="40"
+              width={Math.round(137 * 0.8)} // 80% of the original width
+              height={Math.round(40 * 0.8)} // 80% of the original height
               alt="P307 Logomark"
             />   
           </Section>
           <Container className="bg-[#121212] border border-solid border-[#3F3F3F] rounded-2xl mb-8 p-6 md:p-8">
             <Section className="flex flex-row gap-24">
               <Section>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   Hi { name },
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   Thank you for joining the P307 waitlist. We’re building the
                   infrastructure for collaborative commerce, just like Salesforce
                   did for CRM, and Plaid did for banking.
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-4 md:leading-6 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   If the 20th-century retail scene revolved around Macy's and
                   Best Buy, the 21st-century model will center on us—creators,
                   restaurants, publishers, building communities and earning trust
@@ -134,7 +134,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   height={Math.round(48 * 1.3)}
                   alt="Parth Patel's Signature"
                 />
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left pt-4 pb-8">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left px-4">
                   ⎯{'   '}
                   <Link href="https://www.parth.ski" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4	decoration-from-font">
                     Parth Patel
