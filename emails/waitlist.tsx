@@ -119,7 +119,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   so that you can transact exactly where you discover. We're not building 
                   a new world; we're enhancing the one you already live in. 
                 </Text>
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-66 text-left">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   We're excited to have you on board and will keep you updated on 
                   our progress. 
                 </Text>

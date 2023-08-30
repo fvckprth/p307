@@ -12,8 +12,8 @@ function Footer() {
         <div className='flex flex-row mt-6 justify-between items-end'>
             <div>
                 <p className='text-xs md:text-sm text-[#E4E4E4] text-opacity-25 leading-tight tracking-tight'>
-                    © 2023 East Park Holdings Group<br />
-                    info@eastpark.xyz
+                    © 2023 <a href="https://www.eastpark.xyz" className='text-[#E4E4E4] underline underline-offset-2 md:underline-offset-4	decoration-from-font'>East Park</a>{' '}Holdings Group<br />
+                    <a href="mailto:info@eastpark.xyz" className='text-[#E4E4E4] underline underline-offset-2 md:underline-offset-4	decoration-from-font'>info@eastpark.xyz</a>
                 </p>
             </div>
             <img src="/images/p307-asset.svg" alt="P307 Logo" className="h-6 md:h-10 w-auto" /> {/* Adjust size as needed */}
