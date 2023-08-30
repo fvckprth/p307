@@ -1,6 +1,6 @@
 import './globals.css'
-import Head from 'next/head';
 import localFont from 'next/font/local';
+import { Metadata } from 'next';
 
 const fkGrotesk = localFont({
   src: '../public/fonts/FKGrotesk.otf',
@@ -8,12 +8,29 @@ const fkGrotesk = localFont({
   variable: '--font-fk-grotesk',
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Let anyone sell your products anywhere.',
   description: 'Enable your community to market and sell your products anywhere on the internet.',
-  image: 'https://p307.net/images/P307-social.png',
-  siteUrl: 'https://www.p307.net',
-  twitterHandle: '@p307',
+  openGraph: {
+    images: [
+      {
+        url: 'https://p307.net/images/P307-social.png',
+        width: 1200,
+        height: 675,
+      },
+    ],
+    url: 'https://www.p307.net',
+    siteName: 'P307',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@p307',
+    images: [
+      {
+        url: 'https://p307.net/images/P307-social.png',
+      },
+    ],
+  },
 };
 
 type RootLayoutProps = {
@@ -21,35 +38,8 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-
   return (
     <html lang="en">
-      <Head>
-        <meta charSet="UTF-8" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0 viewport-fit=cover" />
-        <meta name="image" property="og:image" content="https://p307.net/images/P307-social.png" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={metadata.siteUrl} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content="https://p307.net/images/P307-social.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="675" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content={metadata.twitterHandle} />
-        <meta property="twitter:url" content={metadata.siteUrl} />
-        <meta property="twitter:title" content={metadata.title} />
-        <meta property="twitter:description" content={metadata.description} />
-        <meta property="twitter:image" content="https://p307.net/images/P307-social.png" />
-        <meta property="twitter:type" content="image/png" />
-        <meta property="twitter:width" content="1200" />
-        <meta property="twitter:height" content="675" />
-      </Head>
       <body className={fkGrotesk.className}>{children}</body>
     </html>
   );
