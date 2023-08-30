@@ -29,7 +29,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from 'sonner'
 import { supabase } from '../lib/supabaseClient'
 
-
 type Input = z.infer<typeof joinValidator>;
 
 export function SignUpForm() {
@@ -46,7 +45,7 @@ export function SignUpForm() {
 
   async function onSubmit(data: Input) {
     setIsLoading(true);
-    // Simulate API call and success response
+
     await new Promise(resolve => setTimeout(resolve, 1000));
     setTimeout(async () => {
       toast("Thank you for signing up.", {

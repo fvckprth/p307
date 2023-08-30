@@ -144,14 +144,14 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
             </Section>
             <Section>
               <Hr className="border-[#3F3F3F] my-4 md:my-8"/>
-              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-3 md:leading-4 text-left">
+              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-4 text-left">
                 We are{' '}
                 <Link href="https://eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
                   East Park
                 </Link>
                 . We build, foster, and invest in things that forge a greener, more accessible, and joyfully brighter future.
               </Text>
-              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-3 md:leading-4 text-left">
+              <Text className="text-[#3F3F3F] text-xs md:text-sm leading-4 text-left">
                 This email was sent to { email }. If you’d rather not receive this kind of email, you can{' '} 
                 <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font">
                 unsubscribe
@@ -161,7 +161,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
               <Hr className="border-[#3F3F3F] my-4 md:my-8"/>
             </Section>
             <Section>
-              <Text className="text-[#3F3F3F] text-xs md:text-sm no-underline decoration-from-font leading-3 md:leading-4 text-left">
+              <Text className="text-[#3F3F3F] text-xs md:text-sm no-underline decoration-from-font leading-4 text-left">
                 © 2023 East Park Holdings Group.,<br/>
                 25 Clinton St. New York City,<br/>
                 New York 10002
@@ -170,18 +170,18 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
             <Section>
               <Row>
                 <Section className="pr-8 pt-2">
-                  <Link href="tel:+16467594054" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4 pr-4  md:pr-16">
+                  <Link href="tel:+16467594054" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4 pr-4  md:pr-16">
                     +1 (646) 759 4054
                   </Link>
-                  <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4">
+                  <Link href={`${baseUrl}/unsubscribe?email=${encodeURIComponent(email)}`} className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4">
                     Unsubscribe
                   </Link>
                 </Section>
                 <Section className="pr-8 pt-2">
-                  <Link href="mail:info@eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4 pr-4  md:pr-16">
+                  <Link href="mail:info@eastpark.xyz" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4 pr-4  md:pr-16">
                     info@eastpark.xyz
                   </Link>
-                  <Link href="https://resend.com/shared?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsX2lkIjoiOGQ2MDI4YjMtMGEyYy00MmE1LWEwYjEtMjYxNGU2NTI0ZDI1In0sImlhdCI6MTY5MzI4ODgwNiwiZXhwIjoxNjkzNDYxNjA2fQ.0kktdj8N94z1WP1KmVSbr6bsBvW6mYEWCxyrXiG3dmM" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-3 md:leading-4">
+                  <Link href="https://resend.com/shared?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsX2lkIjoiOGQ2MDI4YjMtMGEyYy00MmE1LWEwYjEtMjYxNGU2NTI0ZDI1In0sImlhdCI6MTY5MzI4ODgwNiwiZXhwIjoxNjkzNDYxNjA2fQ.0kktdj8N94z1WP1KmVSbr6bsBvW6mYEWCxyrXiG3dmM" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4 decoration-from-font text-xs md:text-sm leading-4">
                     View in browser
                   </Link>
                 </Section>
