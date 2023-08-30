@@ -21,7 +21,7 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const imageUrl = `${metadata.siteUrl}/public/images/P307-social.png`;
+  const imageUrl = `${metadata.siteUrl}/images/P307-social.png`;
   
   return (
     <html lang="en">
