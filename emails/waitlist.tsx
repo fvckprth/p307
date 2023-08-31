@@ -57,8 +57,8 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
           <Section className="flex items-start p-8">
             <Img
               src={`${baseUrl}/static/p307-logo.png`}
-              width={Math.round(137 * 0.8)} // 80% of the original width
-              height={Math.round(40 * 0.8)} // 80% of the original height
+              width={Math.round(137 * 0.8)} 
+              height={Math.round(40 * 0.8)}
               alt="P307 Logomark"
             />   
           </Section>
@@ -69,13 +69,16 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   Hi { name },
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  Thank you for joining the P307 waitlist. We’re building the
-                  infrastructure for collaborative commerce, just like Salesforce
-                  did for CRM, and Plaid did for banking.
+                  Thank you for joining our waitlist. I'm genuinely glad to have you here.
+                </Text>
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
+                  We've been working on something special with P307. We're designing
+                  a space on the internet where you can discover and buy things in a 
+                  way that feels natural, transparent, and meaningful.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   If the 20th-century retail scene revolved around Macy's and
-                  Best Buy, the 21st-century model will center on us—creators,
+                  Best Buy, the 21st-century model will center on us — creators,
                   restaurants, publishers, building communities and earning trust
                   along the way.
                 </Text>
@@ -87,17 +90,17 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                 <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-4">
                   <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
-                    An online magazine incorporates an in-article shopping
-                    experience for its seasonal gift guides, auto-curated from
-                    a network of suppliers.
+                    An online magazine offers a seamless in-article shopping 
+                    feature for clothing seen in a TV series, with selections 
+                    curated by the show's own costume designer.
                   </Column>
                 </Row>
                 <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-4">
                   <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
-                    A local speakeasy could sell vinyl records handpicked from
-                    a record shops, linking products to DJ audio mixes, and sharing
-                    the proceeds.
+                    A neighborhood speakeasy sells a curated collection of vinyl 
+                    records, each hand-selected from local record stores and paired 
+                    with DJ audio mixes, while seamlessly sharing the profits.
                   </Column>
                 </Row>
                 <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-2">
@@ -111,17 +114,18 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
               </Section>
               <Section>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  At Platform 307, we're turning partners into curated retailers
-                  and suppliers into trusted brands, all in a transparent ecosystem.
+                  We're turning partners into curated retailers and 
+                  suppliers into trusted brands, while allowing seamless 
+                  multi-merchant transactions across the internet.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  Allowing seamless multi-merchant transactions across the internet,
-                  so that you can transact exactly where you discover. We're not building 
-                  a new world; we're enhancing the one you already live in. 
+                  We're not trying to reinvent the wheel; we're just making it 
+                  more attuned to how you already live your life.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  We're excited to have you on board and will keep you updated on 
-                  our progress. 
+                  We'll keep you in the loop as we make strides toward our 
+                  mission. In the meantime, feel free to reach out with
+                  any questions or feedback.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   With appreciation,
