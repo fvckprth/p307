@@ -69,12 +69,13 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   Hi { name },
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  Thank you for joining our waitlist. I'm genuinely glad to have you here.
+                  Thank you for joining our waitlist. I'm so happy to have you here.                
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  We've been working on something special with P307. We're designing
-                  a space on the internet where you can discover and buy things in a 
-                  way that feels natural, transparent, and human.
+                  We've been working on something special with Platform 307. 
+                  We're designing a space on the internet where you can discover 
+                  and buy things in a way that feels natural, transparent, 
+                  and meaningful.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   If the 20th-century retail scene revolved around Macy's and
@@ -98,16 +99,17 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                 <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-4">
                   <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
-                    A neighborhood speakeasy sells a curated collection of vinyl 
-                    records, each hand-selected from local record stores and paired 
-                    with DJ audio mixes, while seamlessly sharing the profits.
+                    A neighborhood speakeasy sells a curated collection of 
+                    vinyl records, each hand-selected from local record stores 
+                    and paired with DJ audio mixes, while seamlessly sharing 
+                    the profits.
                   </Column>
                 </Row>
                 <Row className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left mb-2">
                 <Column className='pr-2 md:pr-4 align-top'>▪</Column>
                   <Column>
-                    A pet owner buys organic dog food, with our AI indicating at
-                    checkout that the veterinarian recommending it has been
+                    A pet owner buys organic dog food, with our AI indicating 
+                    at checkout that the veterinarian recommending it has been 
                     a consultant for the brand.
                   </Column>
                 </Row>
@@ -119,8 +121,8 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   multi-merchant transactions across the internet.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  We're not trying to reinvent the wheel; we're just making 
-                  it more attuned to how you already live your life.
+                  Instead of reinventing the wheel, we're trying to 
+                  make it more attuned to how you already live your life.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   We'll keep you in the loop as we make strides toward our 

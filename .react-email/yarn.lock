@@ -814,6 +814,13 @@
   dependencies:
     react "18.2.0"
 
+"@react-email/font@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/@react-email/font/-/font-0.0.3.tgz"
+  integrity sha512-lhUDMX3bGGXOAY1uviH3OKn2aG6VR+NQf4RqmynHm+Vx+G9eXLJFUDiDeaVJSQFh0+7zCQK8eUGD/+DbEntmtw==
+  dependencies:
+    react "18.2.0"
+
 "@react-email/font@0.0.2":
   version "0.0.2"
   resolved "https://registry.npmjs.org/@react-email/font/-/font-0.0.2.tgz"
