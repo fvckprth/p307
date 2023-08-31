@@ -9,8 +9,8 @@ const fkGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Let anyone sell your products anywhere.',
-  description: 'Enable your community to market and sell your products anywhere on the internet.',
+  title: 'P307 — Let anyone sell your products anywhere.',
+  description: 'Enable your community to sell your products anywhere on the internet.',
   openGraph: {
     images: [
       {
