@@ -138,7 +138,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   height={Math.round(48 * 1.3)}
                   alt="Parth Patel's Signature"
                 />
-                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left px-4">
+                <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left py-4">
                   ⎯{'   '}
                   <Link href="https://www.parth.ski" className="text-[#4285F4] underline underline-offset-2 md:underline-offset-4	decoration-from-font">
                     Parth Patel
