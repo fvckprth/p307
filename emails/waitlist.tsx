@@ -41,7 +41,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
           >
     <Html>
         <Head>
-            <Preview>Welcome to Platform 307, { name }</Preview>
+            <Preview>Welcome to P307, { name }</Preview>
             <Font
               fontFamily="FK Grotesk"
               fallbackFontFamily="Verdana"
@@ -74,7 +74,7 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   We've been working on something special with P307. We're designing
                   a space on the internet where you can discover and buy things in a 
-                  way that feels natural, transparent, and meaningful.
+                  way that feels natural, transparent, and human.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   If the 20th-century retail scene revolved around Macy's and
@@ -119,12 +119,12 @@ export default function WaitlistEmail({ name, email }: WaitlistEmailProps) {
                   multi-merchant transactions across the internet.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
-                  We're not trying to reinvent the wheel; we're just making it 
-                  more attuned to how you already live your life.
+                  We're not trying to reinvent the wheel; we're just making 
+                  it more attuned to how you already live your life.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
                   We'll keep you in the loop as we make strides toward our 
-                  mission. In the meantime, feel free to reach out with
+                  vision. In the meantime, feel free to reach out with
                   any questions or feedback.
                 </Text>
                 <Text className="text-[#E4E4E4] text-sm md:text-base leading-5 md:leading-6 text-left">
