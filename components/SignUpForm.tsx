@@ -122,7 +122,7 @@ export function SignUpForm() {
     <Card className="w-full mx-auto" style={{ fontFamily: 'var(--font-fk-grotesk)' }}>
       <CardHeader>
         <CardTitle>
-          The Easiest way to enable <br/>
+          The easiest way to enable <br/>
           collaborative commerce
         </CardTitle>
         <CardDescription>
